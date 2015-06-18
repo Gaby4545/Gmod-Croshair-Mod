@@ -1,18 +1,4 @@
 
-local hide = {
-	CHudCrosshair = true,
-	CHudZoom 	  = true,
-}
-
-hook.Add( "HUDShouldDraw", "HideHUD", function( name )
-	if ( hide[ name ] ) then
-		return false
-	end
-
-	-- Don't return anything here, it may break other addons that rely on this hook.
-end )
-
-
 if not file.IsDir( "data", "DATA" ) then
 file.CreateDir( "data", "DATA" )
 end
@@ -68,19 +54,19 @@ end
 	end
 	
 		local fov = vgui.Create( "DNumSlider", menu )
-	fov:SetPos( 20, 250 )			 				// Set the position
-	fov:SetSize( 300, 10 )		 					// Set the size
-	fov:SetText( "Field of view" )					// Set the text above the slider
-	fov:SetMin( 75 )								// Set the minimum number you can slide to
-	fov:SetMax( 90 )								// Set the maximum number you can slide to
-	fov:SetDecimals( 0 )							// Decimal places - zero for whole number
-	fov:SetConVar( "fov_desired" ) 					// Changes the ConVar when you slide
+	fov:SetPos( 20, 250 )			 				-- Set the position
+	fov:SetSize( 300, 10 )		 					-- Set the size
+	fov:SetText( "Field of view" )					-- Set the text above the slider
+	fov:SetMin( 75 )								-- Set the minimum number you can slide to
+	fov:SetMax( 90 )								-- Set the maximum number you can slide to
+	fov:SetDecimals( 0 )							-- Decimal places - zero for whole number
+	fov:SetConVar( "fov_desired" ) 					-- Changes the ConVar when you slide
 	
-	local saveBt = vgui.Create( "DButton", menu )	// Create the button
-		saveBt:SetText( "Save" )				 	// Set the text on the button
-		saveBt:SetPos( 660, 530 )						// Set the position on the frame
-		saveBt:SetSize( 60, 25 )				 	// Set the size		
-		saveBt.DoClick = function()			 		// A custom function run when clicked ( note: it a . instead of : )
+	local saveBt = vgui.Create( "DButton", menu )	-- Create the button
+		saveBt:SetText( "Save" )				 	-- Set the text on the button
+		saveBt:SetPos( 660, 530 )					-- Set the position on the frame
+		saveBt:SetSize( 60, 25 )				 	-- Set the size		
+		saveBt.DoClick = function()			 		-- A custom function run when clicked ( note: it a . instead of : )
 
 		if file.Exists( userDataFile, "DATA" ) then
 			local playerData = util.JSONToTable( file.Read( userDataFile, "DATA" ) )
