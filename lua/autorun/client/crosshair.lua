@@ -1,4 +1,3 @@
---[[ // Made by Gaby4545 on steam
 
 local hide = {
 	CHudCrosshair = true,
@@ -94,10 +93,6 @@ end
 			file.Write( userDataFile, util.TableToJSON( data ) )
 		end
 	end
-		
-		
-
- ]]
 
 
 
