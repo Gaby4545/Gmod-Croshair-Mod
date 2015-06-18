@@ -12,5 +12,5 @@ At this moment, it is pretty useless, but I'm planning to make it work like CS:G
         <tr><td>Add a config</td></tr>
         <tr><td>Add the HUD piece whith the croshair</td></tr>
         <tr><td>Finish the options in the GUI</td></tr>
-        <tr><td>Client side saving</td></tr>
+        <tr><td><strike>Client side saving</strike> + multi saves slots</td></tr>
 </table>
