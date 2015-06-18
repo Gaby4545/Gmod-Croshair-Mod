@@ -2,9 +2,9 @@ AddCSLuaFile()
 
 
 crosshaircfg = {
-	version = "0.1.1" -- Don't touch
+	version = "0.1.1", -- Don't touch
 
-	openkey = F4
+	openkey = F4,
 }
 
 
